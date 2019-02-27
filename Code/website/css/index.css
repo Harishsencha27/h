@@ -1,0 +1,200 @@
+@font-face {
+   font-family: paperdaisy;
+    src: url("fonts/paperdaisy.ttf");
+}
+
+@font-face {
+   font-family: dreams;
+    src: url("fonts/dreams.ttf");
+}
+@font-face {
+    font-family: champagne;
+    src: url("fonts/champagne.ttf");
+}
+@font-face {
+    font-family: prisma;
+    src: url("fonts/Prisma.ttf");
+}
+@font-face {
+    font-family: carrot;
+    src: url("fonts/DK Carrot Juice.otf");
+	}
+		img{
+			position: absolute;
+		}
+		#img{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		#yellow{
+            margin-left: 20.2%;
+            margin-top: 38.5%;
+            height:100px;
+            position: absolute;
+            cursor: pointer;
+			text-align:center; 
+			color: silver; 
+			font-family:dreams; 
+			font-size: 120px; 
+			padding: 20px 30px 10px 80px;
+			font-face:bolder;
+			font-weight:bold;
+        }
+		
+		.button {
+   		    position: absolute;
+		    top: 50%;
+		    left: 50.2%;
+		    transform: translate(-50%, -50%);
+		    color: #ffffffff;
+		    font-family: paperdaisy;
+		    font-size: 55px;
+			font-weight:bold;
+		}	
+
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+        /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    .error {
+      color: rgba(0,191,255,0.8);
+      float: right;}
+
+    /* Set a style for all buttons */
+    button,#g {
+        font-family: dreams;
+        font-size: initial;
+        background-color:black;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0px;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+      text-align:center;
+      border:1px solid rgba(0,191,255,0.8);
+    }
+
+    button:hover,#g:hover {
+      background-color:rgba(0,191,255,0.5);
+        opacity: 0.9;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        width: auto;
+        padding: 14px 50px;
+        background-color: black;
+    }
+
+        .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
+        padding-top: 150px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: rgba(0,0,0,0.9);
+        margin:auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 40%; /* Could be more or less, depending on screen size */
+      color:white;
+    }
+
+    .modal-content-main {
+        background-color: rgba(0,0,0,0.95);
+        margin:auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 40%; /* Could be more or less, depending on screen size */
+      color:white;
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color:white;
+        font-size: 35px;
+        font-weight: bold;
+    }
+	.close1 {
+    //position: absolute;
+	float:right;
+  margin-right: 10px;
+    top: 0;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus,.close1:hover,.close1:focus {
+        color: rgba(0,191,255,0.5);
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+    }
+        
+    @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+        span.psw {
+           display: block;
+           float: none;
+        }
+        .cancelbtn {
+           width: 100%;
+        }
+    }
+
+    label{
+      font-family: dreams;
+    }
+
+	

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <title>SelfieLessActs</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link href="css/homepage.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+             $(window).scroll(function() {
+              if($(document).scrollTop() > 150) {
+                $('#nav').addClass('shrink');
+              }
+              else {
+              $('#nav').removeClass('shrink');
+              }
+            });
+        });
+    </script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+
+
+<body onload="pCat()">
+
+  <div class="topnav" id="nav">
+
+      <a id="delete">Delete a Category</a>
+
+      <a id="add">Add a Category</a>
+
+      <a id="log" href="index.html" target="_top">
+
+        <img src="images/log.jpg" alt="logo" height="70px" />
+
+      </a>
+
+      <div class="selfie">SelfieLessActs</div>
+    
+  </div>
+  
+  <br><br><br><br><br><br><br><br><br>
+  
+  <!-- The Modal for adding -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+
+
+            <div class="modal-header">
+
+
+                      <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                      <h1 style="text-align: center; font-family:fish;font-size:60px">Add a Category</h1>
+                    </div>
+                    <div class="modal-body">
+
+                  <label><b>Enter the category you wish to add</b></label>
+
+                  <input id="catName" type="text" placeholder="Enter category" name="newCat" required/>
+                  
+                  <br><br><br><br>
+
+                  <button class="sear" id="sub" type="button" value="Add" onclick="addCat()">Add</button>
+
+
+            </div>
+      </div>
+    </div>  
+
+    <!-- The Modal for deleting -->
+    <div id="myModal1" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+
+
+            <div class="modal-header">
+
+
+                      <span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                      <h1 style="text-align: center; font-family:fish;font-size:60px">Delete a Category</h1>
+                    </div>
+                    <div class="modal-body">
+
+                  <label style="color:white"><b>Enter the category you wish to delete</b></label>
+
+                  <input id="delCat" type="text" placeholder="Enter category" name="delCat" required/>
+                  
+                  <br><br><br><br>
+
+                  <button class="sear" id="del" type="button" value="Delete" onclick="delCat()">Delete</button>
+
+                  
+            </div>
+      </div>
+    </div>  
+
+    <div id="mainDiv">
+         
+    </div>
+
+
+
+<!--HTML and Flask Intergration using AJAX XMLHTTPRequest-->
+
+<script type="text/javascript" src="integrator/cats.js"></script>
+
+  
+</body>
+
+
+<script type="text/javascript" src="js/category.js"></script> 
+
+
+</html>

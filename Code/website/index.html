@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>Home</title>
+
+	<link href="css/index.css" rel="stylesheet"></link>
+
+</head>
+
+<body>
+
+	<img id="img" src="images/hands1.png" alt="main" >
+
+
+	<div class="detail" onclick="document.getElementById('plug').style.display='block'" style="cursor: pointer;">
+      <div class="button">ENTER</div> 
+	</div>
+
+
+	<div id="yellow">SelfieLess Acts</div>
+
+
+	<div id="plug" class="modal">
+  
+  	<div class="modal-content-main animate">
+
+	 <span onclick="document.getElementById('plug').style.display='none'" class="close1" title="Close Modal">&times;</span>
+
+    <br>
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:80%; margin: 22px 48px">LOGIN</button><br>
+		<button onclick="document.getElementById('id02').style.display='block'" style="width:80%;margin: 22px 48px">SIGN UP</button><br>
+		<button onclick="document.getElementById('id03').style.display='block'" style="width:80%;margin: 22px 48px">DELETE USER</button><br><br><br>
+	</div>
+	</div>	
+
+
+
+
+<div id="id01" class="modal">
+  <div class="modal-content animate">
+    <div class="container">
+
+  	<h2 style="text-align:center;color:rgba(0,191,255,0.8)">Login<span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span></h2>
+
+      <label><b>Username*</b></label>
+      <input id="luname" type="text" placeholder="Enter Username" name="unamel" required>
+
+      <label><b>Password*</b></label>
+      <input id="lpwd" type="password" placeholder="Enter Password" name="pwd" required>
+    
+    </div>
+
+    <div class="container">
+
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+	    <button type="submit" style="float:right;" onclick="login()">Login</button><br>
+
+    </div>
+   </div>
+</div>
+
+
+
+
+
+<div id="id02" class="modal">
+  <div class="modal-content animate">
+    <div class="container">
+  	   
+       <h2 style="text-align:center;color:rgba(0,191,255,0.8)">Sign Up<span onclick="document.getElementById('id02').style.display='none'" class="close1" title="Close Modal">&times;</span></h2>
+  	  
+        <label><b>Username*</b></label>
+        
+        <input id="uname" type="text" placeholder="Enter username" name="uname" required>
+
+  	  
+        <label><b>Password*</b></label>
+
+        <input id="pwd" type="password" placeholder="Enter Password" name="pwd" required>
+        
+        <div class="container">
+          
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+          
+          <button type="button" id="signupbtn" onclick="add()" style="float:right;">Sign Up</button>
+        
+        </div>
+    </div>
+</div>
+</div>
+	
+
+
+
+<div id="id03" class="modal">
+  <div class="modal-content animate">
+    <div class="container">
+
+  	<h2 style="text-align:center;color:rgba(0,191,255,0.8)">Delete User<span onclick="document.getElementById('id03').style.display='none'" class="close1" title="Close Modal">&times;</span></h2>
+
+
+   <label><b>Username you wish to delete</b></label>
+
+    <input type="text" id="delUname" placeholder="Enter Username" name="uname" required>
+
+
+      </div>
+      <div class="container">
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+  	  
+
+      <button type="button" id="deletebtn" onclick="del()" style="float:right;">DELETE</button>
+      
+      <br>
+      </div>
+    </div>  
+</div>	
+
+
+<script type="text/javascript" src="js/sha.js"></script> 
+
+<script type="text/javascript" src="integrator/index.js"></script>
+
+
+</body>	
+
+</html>

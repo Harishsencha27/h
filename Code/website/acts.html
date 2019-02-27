@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+
+    <title>SelfieLessActs</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link href="css/acts.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+             $(window).scroll(function() {
+              if($(document).scrollTop() > 150) {
+                $('#nav').addClass('shrink');
+              }
+              else {
+              $('#nav').removeClass('shrink');
+              }
+            });
+          });
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+
+
+<body onload="loadActs()">
+
+  <div class="topnav" id="nav">
+      <a id="delete">Delete an Act</a>
+  		<a id="upload">Upload an Act</a>
+
+  		<a id="log" href="homepage.html" target="_top">
+        <img src="images/log.jpg" alt="logo" height="70px" />
+      </a>
+
+  		<div class="selfie">Acts</div>
+
+  </div>
+
+
+  	<br><br><br><br><br><br><br>
+
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+            <h1 style="text-align: center; font-family:fish;font-size:60px; margin-bottom: 2px; margin-top:10px">Upload an Act</h1>
+
+          </div>
+
+          <div class="modal-body">
+
+            <input id = "UpUname" type="text" placeholder="Enter your username" name="usn" required/>
+
+            <!--<input id = "UpCat" type="text" placeholder="Enter the category" name="categoryName" required/><br><br>-->
+
+      	     <input id="myimg" type='file' name='pic' accept="image/*" onchange="previewFile()" />
+              <!--<img id="myImg" src="##	" alt="your image" />--><br><br><br>
+              <textarea id ="ta" placeholder="Enter a caption for the image"></textarea>
+          	 <br><br>
+          	 <button class="sear" id="sub" type="submit"  value="Upload" onclick="upload()">Upload</button>
+          
+          </div>
+
+        </div>
+
+  </div>	
+
+
+  <!-- The Delete Modal -->
+  <div id="myModal1" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+
+            <h1 style="text-align: center; font-family:fish;font-size:60px">Delete an Act</h1>
+
+          </div>
+
+          <div class="modal-body">
+            
+          
+                  <label style="color:white; font-size: 25px"><b>Enter the Act ID of the act you want to delete</b></label>
+
+                  <input id="delName" type="text" placeholder="Enter ActID  " name="delCat" required/>
+                  
+                  <br><br><br><br>
+
+                  <button class="sear" id="del" type="button" value="Delete" onclick="delAct()">Delete</button>
+          </div>
+
+        </div>
+
+  </div>  
+
+
+
+  <div id="main">
+    
+  </div>
+
+
+  <!--HTML and Flask Intergration using AJAX XMLHTTPRequest-->
+
+  <script type="text/javascript" src="integrator/acts.js"></script>
+
+
+
+
+</body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/heart.js"></script>
+<script type= "text/javascript" src="js/like-button.js"></script>
+<script type="text/javascript" src="js/acts.js"></script>
+
+</html>
